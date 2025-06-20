@@ -1,0 +1,256 @@
+body {
+    font-family: "Familjen Grotesk", sans-serif;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 22px;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Form Section Styles */
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+    outline: none;
+}
+
+textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+/* File Input Styling */
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f7fafc;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 12px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #2980b9;
+}
+
+/* Button Styles */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+/* Product List Section */
+.product-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Action Buttons in Table */
+.action-links {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-link, .delete-link {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.edit-link {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-link {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.edit-link:hover, .delete-link:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Status Tags */
+.status-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.in-stock {
+    background-color: #def7ec;
+    color: #03543f;
+}
+
+.low-stock {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.out-of-stock {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .action-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-section, .product-section {
+        padding: 15px;
+    }
+}

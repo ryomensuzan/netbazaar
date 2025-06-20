@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: "Familjen Grotesk", sans-serif;
+    background-color: #f8f9fa;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Filter Form */
+form {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+form select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form select:focus {
+    border-color: #007bff;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[name="action"][value="approve"] {
+    background-color: #28a745;
+}
+
+button[name="action"][value="approve"]:hover {
+    background-color: #218838;
+}
+
+button[name="action"][value="reject"] {
+    background-color: #dc3545;
+}
+
+button[name="action"][value="reject"]:hover {
+    background-color: #c82333;
+}
+
+button[name="action"][value="suspend"] {
+    background-color: #ffc107;
+    color: #000;
+}
+
+button[name="action"][value="suspend"]:hover {
+    background-color: #e0a800;
+}
+
+button[name="action"][value="reactivate"] {
+    background-color: #17a2b8;
+}
+
+button[name="action"][value="reactivate"]:hover {
+    background-color: #138496;
+}
+
+/* No Sellers Found Message */
+table tbody tr td[colspan] {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    padding: 20px;
+}

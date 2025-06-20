@@ -1,0 +1,108 @@
+body{
+  font-family: "Familjen Grotesk", sans-serif;
+}
+.admin-account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+}
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.admin-form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+.admin-form input[type="text"],
+.admin-form input[type="email"],
+.admin-form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.admin-form input[type="text"]:focus,
+.admin-form input[type="email"]:focus,
+.admin-form input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.admin-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.admin-form button:hover {
+  background-color: #0056b3;
+}
+.admin-form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.admin-form .success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.admin-form .loading-message {
+  color: #007bff;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.admin-form .loading-message::before {
+  content: "Loading... ";
+  font-weight: bold;
+}
+.admin-form .loading-message::after {
+  content: "Please wait.";
+  font-style: italic;
+}
+.admin-form .loading-message::after {
+  content: "Please wait.";
+  font-style: italic;
+}
+.admin-form .loading-message::after {
+  content: "Please wait.";
+  font-style: italic;
+}
+.logout-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.logout-form button {
+  padding: 10px 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.logout-form button:hover {
+  background-color: #c82333;
+}

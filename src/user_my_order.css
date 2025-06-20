@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-600: #6c757d;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --radius-md: 8px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+}
+
+body {
+    font-family: 'Familjen Grotesk', sans-serif;
+    background-color: var(--gray-100);
+}
+
+.page-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.orders-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.order-card {
+    background-color: #fff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.order-header {
+    background-color: var(--gray-100);
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--gray-300);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-id {
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+.order-date {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.order-status {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-processing { 
+    background-color: #fff3cd; 
+    color: #856404; 
+}
+
+.status-shipped { 
+    background-color: #cce5ff; 
+    color: #004085; 
+}
+
+.status-delivered { 
+    background-color: #d4edda; 
+    color: #155724; 
+}
+
+.order-items {
+    padding: var(--spacing-sm);
+}
+
+.item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--gray-200);
+    align-items: center;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.item-meta {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.item-price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.order-summary {
+    background-color: var(--gray-100);
+    padding: var(--spacing-sm);
+    border-top: 1px solid var(--gray-300);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-amount {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-track {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-track:hover {
+    background-color: #0056b3;
+}
+
+.empty-orders {
+    text-align: center;
+    padding: var(--spacing-md);
+    color: var(--gray-600);
+}
+
+.empty-orders i {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-300);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-header {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        align-items: flex-start;
+    }
+
+    .item {
+        grid-template-columns: auto 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .item-price {
+        grid-column: 1 / -1;
+        text-align: right;
+    }
+
+    .order-summary {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: var(--spacing-xs);
+    }
+
+    .orders-container {
+        padding: var(--spacing-xs);
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

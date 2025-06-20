@@ -1,0 +1,90 @@
+body{
+    font-family: "Familjen Grotesk", sans-serif;
+}
+.filter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    margin: 20px 0;
+    padding: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.filter-form:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.filter-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+.filter-form input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.filter-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+.filter-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.filter-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table tr.selected {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+table tr.selected:hover {
+    background-color: #c3e6cb;
+}
