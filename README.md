@@ -37,3 +37,9 @@ start MySql and Apache server
 Open Project file in "localhost/filename(net_bazaar)/"
 ```
 
+## Screenshots
+
+![App Screenshot](assets/landing%20page.png)
+![App Screenshot](assets/user%20Dashboard.png)
+![App Screenshot](assets/admin%20dashboard.png)
+![App Screenshot](assets/seller%20Dashboard.png)
