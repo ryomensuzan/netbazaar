@@ -13,7 +13,7 @@ Net Bazaar is a dynamic e-commerce platform built with PHP and MySQL, designed t
 https://youtu.be/5GlAxa58Em4
 ## Documentation
 
-[Documentation](https://github.com/ryomensuzan/netbazaar/tree/6850f8a7371a9ae8fb22d0458d07933306c988c1/documentation)
+[Documentation](documentation/Net_Bazaar.docx)
 
 
 ## 🚀 About Me
